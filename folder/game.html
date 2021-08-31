@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../bootstrap-4.5.2/dist/css/bootstrap.min.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container-fluid pt-2" id="game">
+        <div class="row">
+            <div></div>
+        </div>
+        <div class="row text-white">
+            <div class="col-lg-3 pt-5">
+                <div class="pl-4">
+                    <big id="tableD">Please enter your Name & Using</big>
+                    <div class="mt-4"  id="tableDi">
+                        Player 1
+                    </div>
+                    <div class="row" id="tableDis">
+                        <input type="text" class="rounded-pill pl-3" placeholder="Player 1" required maxlength="12" id="playerOne"><input type="text" class="pl-3 rounded-pill" placeholder="Using" required maxlength="1" id="usingOne">
+                    </div>
+                    <div class="mt-4" id="tableDisa">
+                        Player 2
+                    </div>
+                    <div class="row" id="tableDisab">
+                        <input type="text" class="rounded-pill pl-3" placeholder="Player 2" required maxlength="12" id="playerTwo"><input type="text" class="pl-3 rounded-pill" placeholder="Using" required maxlength="1" id="usingTwo">
+                    </div>
+                    <button class="btn btn-light text-success rounded-pill mt-5 ml-5 pl-5 pr-5" onclick="start()"  id="tableDisabl">Start</button>
+                    <div class="text-warning mt-2" id="warning">LET PLAY</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mt-5">
+                <div class="row">
+                    <button class="mx-auto btn btn-light rounded-pill text-success pl-4 pr-4" onclick="nextFunction(event)">NEXT</button>
+                </div>
+                <table class="mx-auto mt-5 border">
+                    <tr>
+                        <td id="face" class="face text-white" onclick=gameFunction(event)></td>
+                        <td id="faceOne" class="faceOne text-white" onclick=gameFunction(event)></td>
+                        <td id="faceTwo" class="faceTwo text-white" onclick=gameFunction(event)></td>
+                    </tr>
+
+                    <tr>
+                        <td id="faceThree" class="faceThree text-white" onclick=gameFunction(event)></td>
+                        <td id="faceFour" class="faceFour text-white" onclick=gameFunction(event)></td>
+                        <td id="faceFive" class="faceFive text-white" onclick=gameFunction(event)></td>
+                    </tr>
+
+                    <tr>
+                        <td id="faceSix" class="faceSix text-white" onclick=gameFunction(event)></td>
+                        <td id="faceSeven" class="faceSeven text-white" onclick=gameFunction(event)></td>
+                        <td id="faceEight" class="faceEight text-white" onclick=gameFunction(event)></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6 col-lg-3" id="profileSide">
+                <div class="row mt-5">
+                    <div class="col-12 col-sm-4 col-lg-8 col-xl-4 pl-3">
+                        <img src="../Images/icons8_Male_User_50px_2.png" alt="" id="profile">
+                    </div>
+                    <div class="col-12 col-sm-8 col-lg-12 col-xl-8 text-white">
+                        <b id="headingPlayers">Player 1</b>
+                        <div class="row" id="nameUsing">
+                            Name: <div class="ml-2" id="nameOne"></div>
+                        </div>
+                        <div class="row">
+                            Using: <div class="ml-2" id="useOne"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-white mt-4 pl-3 Score">Score: <input class="btn btn-light text-success ml-2 pl-4 pr-4" value="0" type="button" id="scoreOne"></div>
+                <div class="row bg-light pl-3 mt-1  wish">
+                    <div class="mx-auto text-success" id="firstProfile"></div>
+                </div>
+                <div class="row border border-white pt-0 mt-0">
+                    <div class="mx-auto" id="vs"></div>
+                </div>
+                <div class="row mt-5 pl-3">
+                    <div class="col-12 col-sm-4 col-lg-8 col-xl-4 pl-3">
+                        <img src="../Images/icons8_Male_User_52px.png" alt="" id="profile">
+                    </div>
+                    <div class="col-12 col-sm-8 col-lg-12 col-xl-8 text-white">
+                        <b id="headingPlayers">Player 2</b>
+                        <div class="row" id="nameUsing">
+                            Name: <div class="ml-2" id="nameTwo"></div>
+                        </div>
+                        <div class="row">
+                            Using: <div class="ml-2" id="useTwo"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-white mt-4 pl-3 Score">Score: <input class="btn btn-light text-success ml-2 pl-4 pr-4" value="0" type="button" id="scoreTwo"></div>
+                <div class="row bg-light pl-3 mt-1 wish">
+                    <div class="mx-auto text-success" id="secondProfile"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-1 pb-5">
+            <div class="mx-auto mb-5">
+                <a href="game.html" class="ml-auto"><button class="btn btn-light text-success rounded-pill pl-5 pr-5 pt-3 pb-3 ml-auto mt-5">Restart</button></a>
+                <a href="play.html"><button class="btn btn-light text-danger rounded-pill pl-5 pr-5 pt-3 pb-3 mt-5">End</button></a>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html> 

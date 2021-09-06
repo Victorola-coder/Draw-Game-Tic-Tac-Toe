@@ -1,4 +1,5 @@
-var a = 0;
+let a = 0;
+let playMode= false;
 
 function start() {
     if (playerOne.value == '' && playerTwo.value != ''
@@ -58,6 +59,7 @@ function start() {
         tableDisabl.style.display = 'none';
         warning.style.fontSize = '80px';
         warning.innerHTML = 'LET PLAY';
+        playMode = true;
     } else {
         warning.innerHTML = "Game won't start until you input your details";
     }
@@ -366,6 +368,8 @@ function gameFunction(e) {
         e.target.innerHTML = useTwo.innerHTML;
         a = 0;
         gameFunction()
+    } else if (playMode == true){
+        warning.innerHTML = 'LET PLAY';
     } else {
         warning.innerHTML = "Game won't start until you input your details";
     }
@@ -446,7 +450,7 @@ function nextFunction(e) {
         counterSix = 0;
         counterSeven =0;
         counterEight = 0;
-    } else {
+    } else if(nameOne.innerHTML != "" && nameTwo.innerHTML != ""){
         secondProfile.innerHTML ='DRAW';
         firstProfile.innerHTML = 'DRAW';
         faceOne.innerHTML = '';
